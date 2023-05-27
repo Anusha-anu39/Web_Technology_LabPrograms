@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Squares and Cubes Table</title>
+ </head>
+ <body>
+ <script>
+ // Define an empty array to store the rows of the table
+ var rows = [];
+ // Calculate the squares and cubes of the numbers from 0 to 10
+ for (var i = 0; i <= 10; i++) {
+ var square = i * i;
+ var cube = i * i * i;
+ // Create a new row with the number, its square, and its cube
+ var row = "<tr><td>" + i + "</td><td>" + square + "</td><td>" + cube + "</td></tr>";
+ // Add the row to the array
+ rows.push(row);
+ }
+ // Create the HTML table with the rows
+ var table = 
+"<table><thead><tr><th>Number</th><th>Square</th><th>Cube</th></tr></thead><tbody>" + 
+rows.join("") + "</tbody></table>";
+ // Display the table on the web page
+ document.write(table);
+ </script>
+ </body>
+</html>

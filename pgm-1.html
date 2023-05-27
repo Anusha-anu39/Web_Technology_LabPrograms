@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculator</title>
+</head>
+<body>
+<h1>Simple Calculator</h1>
+<label>Enter the first number:</label>
+<input type="number" id="num1"><br><br>
+<label>Enter the second number:</label>
+<input type="number" id="num2"><br><br>
+<button onclick="sum()">Sum</button>
+<button onclick="product()">Product</button>
+<button onclick="difference()">Difference</button>
+<button onclick="quotient()">Quotient</button><br><br>
+<label>Result:</label>
+<input type="number" id="result" disabled>
+<script>
+function sum() {
+let num1 = document.getElementById("num1").value;
+let num2 = document.getElementById("num2").value;
+let result = Number(num1) + Number(num2);
+document.getElementById("result").value = result;
+}
+function product() {
+let num1 = document.getElementById("num1").value;
+let num2 = document.getElementById("num2").value;
+let result = Number(num1) * Number(num2);
+document.getElementById("result").value = result;
+}
+function difference() {
+let num1 = document.getElementById("num1").value;
+let num2 = document.getElementById("num2").value;
+let result = Number(num1) - Number(num2);
+document.getElementById("result").value = result;
+}
+function quotient() {
+let num1 = document.getElementById("num1").value;
+let num2 = document.getElementById("num2").value;
+let result = Number(num1) / Number(num2);
+document.getElementById("result").value = result;
+}
+</script>
+</body>
+</html>

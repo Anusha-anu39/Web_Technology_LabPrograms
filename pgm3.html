@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Text Animation</title>
+ </head>
+ <body>
+ <div id="text">TEXT-GROWING</div>
+ <script>
+ // Define the starting font size and color
+ var fontSize = 1;
+ var color = "red";
+ 
+ // Define the function that increases and decreases the font size
+ function changeSize() {
+ // Get the text element from the HTML page
+ var text = document.getElementById("text");
+ 
+ // Increase the font size and set the color to red
+ if (fontSize < 50) {
+ fontSize++;
+ color = "red";
+ } 
+ 
+ // Decrease the font size and set the color to blue
+ else if (fontSize >= 50 && fontSize > 5) {
+ fontSize--;
+ color = "blue";
+ } 
+ 
+ // Stop the interval when the font size reaches 5
+ else {
+ clearInterval(intervalID);
+ }
+ 
+ // Set the font size and color of the text element
+ text.style.fontSize = fontSize + "pt";
+ text.style.color = color;
+ 
+ // Set the text content of the text element
+ if (fontSize < 50) {
+ text.textContent = "TEXT-GROWING";
+ } else {
+ text.textContent = "TEXT-SHRINKING";
+ }
+ }
+ 
+ // Call the changeSize function every 100ms using setInterval
+ var intervalID = setInterval(changeSize, 100);
+ </script>
+ </body>
+</html>
